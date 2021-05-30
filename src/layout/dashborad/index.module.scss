@@ -1,0 +1,33 @@
+.layout{
+    display: flex;
+    height: 100%;
+    .header{
+        background-color: #fff;
+        .trigger{
+            margin-left: 15px;
+        }
+        .nav{
+            display: flex;
+            .navinfo{
+                display: flex;
+                flex:1;
+                .logo{
+                    width:210px
+                }
+            }
+            .userinfo{
+                color: #fff;
+            }
+            :global{
+                .ant-menu-dark.ant-menu-horizontal > .ant-menu-item{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+.layoutcontent{
+    >div{
+        height: 100%;
+    }
+}
