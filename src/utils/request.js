@@ -2,7 +2,6 @@ import axios from 'axios';
 import { getToken } from './auth';
 import { message } from 'antd';
 const service = axios.create({
-    // baseURL: import.meta.env.VITE_BASE_API,
     baseURL: '',
     timeout: 5000, // request timeout
     validateStatus: function() {

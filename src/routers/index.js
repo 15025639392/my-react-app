@@ -5,21 +5,21 @@ export const routes = [
     {
         path: '/test1',
         meta:{
-            title:'test1'
+            title:'路由1'
         },
         component: import('../layout/demo')
     },
     {
         path: '/test2',
         meta:{
-            title:'test2'
+            title:'路由2'
         },
         component: import('../layout/demo2')
     },
     {
         path: '/test3',
         meta:{
-            title:'test3'
+            title:'路由3'
         },
         component: import('../layout/demo3')
     }

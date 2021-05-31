@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import vitePluginImp from 'vite-plugin-imp';
 import reactRefresh from '@vitejs/plugin-react-refresh';
+import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
     css: {
@@ -10,6 +11,11 @@ export default defineConfig({
             },
         }
     },
+    resolve:{
+        alias:[
+            { find: 'api', replacement: path.resolve(__dirname, './src/api') }
+        ]
+    },
 	
     esbuild: {
         jsxInject: 'import React from \'react\''
@@ -17,7 +23,7 @@ export default defineConfig({
     server:{
         proxy:{
             '^/api/.*':{
-                target: 'https://www.baidu.com',
+                target: 'https://www.fastmock.site/mock/4f709b8a760ba4dacabe5c39c44716df',
                 changeOrigin: true
             }
         }
